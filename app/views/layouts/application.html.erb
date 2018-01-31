@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <title><%= yield(:title) %> | My pages</title> -->
     <title><%= setting_title(yield(:title)) %></title> 
-    <!-- <% binding.pry %> -->
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <header>
+     <%= render "layouts/header" %>
+    </header>
+    <div class="container">
     <%= yield %>
+    </div>
+   <footer  class="container-fluid bg-4 text-center">
+      <%= render "layouts/footer" %>
+
+   </footer>
   </body>
 </html>
