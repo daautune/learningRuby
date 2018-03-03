@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'employees/show'
   get 'employees/index'
 
   get 'static_pages/home'

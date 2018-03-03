@@ -3,14 +3,22 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         <% @employees.each do |employee| %>
-        <tr>
-            <td><%= employee.name %></td>
-            <td><%= employee.email %></td>
-        </tr>
-        <% end %>
+            <tr>
+                <td>
+                    <%= employee.name %>
+                </td>
+                <td>
+                    <%= employee.email %>
+                </td>
+                <td>
+                    <%= link_to  "show", employee_path(employee.id) %>
+                </td>
+            </tr>
+            <% end %>
     </tbody>
 </table>
