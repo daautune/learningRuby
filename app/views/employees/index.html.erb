@@ -3,22 +3,33 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+
             <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-        <% @employees.each do |employee| %>
-            <tr>
-                <td>
-                    <%= employee.name %>
-                </td>
-                <td>
-                    <%= employee.email %>
-                </td>
-                <td>
-                    <%= link_to  "show", employee_path(employee.id) %>
-                </td>
-            </tr>
-            <% end %>
-    </tbody>
+    <%= link_to  "new  ", new_employee_path %>
+        <tbody>
+            <% @employees.each do |employee| %>
+                <tr>
+                    <td>
+                        <%= employee.name %>
+                    </td>
+                    <td>
+                        <%= employee.email %>
+                    </td>
+                    <td>
+                        <%= link_to  "show  ", employee_path(employee.id) %>
+                    </td>
+                    <td>
+                        <%= link_to  "edit  ", edit_employee_path(employee.id) %>
+                    </td>
+                    <td>
+                        <%= link_to  "delete  ", employee_path(employee.id) %>
+                    </td>
+                    <td>
+                        <%= link_to  "update  ", employee_path(employee.id) %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
 </table>
