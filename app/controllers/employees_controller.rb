@@ -13,9 +13,13 @@ class EmployeesController < ApplicationController
     @employee = Employee.find_by id: params[:id]
   end
   def create
+    
       em = Employee.new(employee_params)
-      em.save
+      if em.save
       redirect_to employees_path
+      else 
+        render :new
+      end
   end
 
   def update 
@@ -42,6 +46,6 @@ private
      @employee = Employee.find_by id:params[:id]
   end
   def employee_params
-     params.require(:employee).permit :name, :email 
+     params.require(:employee).permit :name, :email , :password, :password_confirm
   end
 end

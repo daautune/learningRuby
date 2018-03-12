@@ -1,16 +1,21 @@
 <h1>New Employee</h1>
 <!-- <%= render 'form', employee: @employee %> -->
 <%= form_for(@employee) do |f| %>
+    <h2>
+        <%= @employee.errors.full_messages %>
+    </h2>
     Name:
     <Br>
     <%= f.text_field :name %>
         Email:
         <Br>
         <%= f.text_field :email %>
+            Passwork:
             <br>
-            <%= f.text_field :passwork %>
+            <%= f.text_field :password %>
+                Passwork Confirm:
                 <br>
-                <%= f.text_field :passwork_confirm %>
+                <%= f.text_field :password_confirm %>
                     <br>
                     <%= f.submit  "Create" %>
                         <% end %>

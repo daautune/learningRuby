@@ -7,5 +7,11 @@
             <p><strong>Email: </strong>
                 <%= @employee.email %>
                     <p>
-                        <%= link_to 'Edit', edit_employee_path(@employee) %>
-                            <%= link_to 'Back', employees_path %>
+                        <p><strong>Password: </strong>
+                            <%= @employee.password %>
+                                <p>
+                                    <p><strong>Password Confirm: </strong>
+                                        <%= @employee.password_confirm %>
+                                            <p>
+                                                <%= link_to 'Edit', edit_employee_path(@employee) %>
+                                                    <%= link_to 'Back', employees_path %>

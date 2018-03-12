@@ -3,7 +3,8 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
-
+            <th>Password</th>
+            <th>Password Confirm</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -16,6 +17,12 @@
                     </td>
                     <td>
                         <%= employee.email %>
+                    </td>
+                    <td>
+                        <%= employee.password %>
+                    </td>
+                    <td>
+                        <%= employee.password_confirm %>
                     </td>
                     <td>
                         <%= link_to  "show  ", employee_path(employee.id) %>
