@@ -3,7 +3,7 @@ module ApplicationHelper
     # if "#{title}".empty?
     #   my_title = "beautiful | My pages"
       # binding.pry
-      title = "ngo tien" if title.empty?
+      title = "INSAL" if title.empty?
     # else 
       my_title = "#{title} | My pages"
   end
