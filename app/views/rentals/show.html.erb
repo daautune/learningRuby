@@ -1,0 +1,19 @@
+<p id="notice">
+    <%= notice %>
+</p>
+<p><strong>Name: </strong>
+    <%= @rental.name %>
+        <p>
+            <p><strong>Size: </strong>
+                <%= @rental.size %>
+                    <p>
+                        <p><strong>Price: </strong>
+                            <%= @rental.price %>
+                                <p>
+                                    <p><strong>Color: </strong>
+                                        <%= @rental.color %>
+                                            <p>
+                                                <p><strong>Amount: </strong>
+                                                    <%= @rental.amount %>
+                                                </p>
+                                                <%= link_to 'Back', rentals_path %>

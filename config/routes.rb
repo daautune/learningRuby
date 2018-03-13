@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'rentals/new'
+  get 'rentals/edit'
+  get 'rentals/show'
+  get 'rentals/index'
+
   get 'employees/new'
   get 'employees/edit'
   get 'employees/update'
@@ -21,6 +26,7 @@ Rails.application.routes.draw do
   get 'static_page/logout'
 
   resources :employees
+  resources :rentals
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

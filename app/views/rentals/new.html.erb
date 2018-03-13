@@ -1,0 +1,19 @@
+<%= form_for(@rental) do |f| %>
+    Name:
+    <Br>
+    <%= f.text_field :name %>
+        Size:
+        <Br>
+        <%= f.text_field :size %>
+            Price:
+            <br>
+            <%= f.text_field :price %>
+                Color:
+                <br>
+                <%= f.text_field :color %>
+                    Amount:
+                    <br>
+                    <%= f.text_field :amount %>
+                        <br>
+                        <%= f.submit  "Create" %>
+                            <% end %>
